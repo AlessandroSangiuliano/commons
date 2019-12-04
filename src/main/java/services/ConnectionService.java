@@ -5,10 +5,7 @@ import utils.CommandArguments;
 import utils.Data;
 
 import java.io.*;
-import java.net.MalformedURLException;
-import java.net.Socket;
-import java.net.URL;
-import java.net.URLConnection;
+import java.net.*;
 import java.util.logging.Logger;
 
 public class ConnectionService
@@ -20,6 +17,9 @@ public class ConnectionService
     //private Scanner socketIn;
     //private PrintWriter socketOut;
     private String ipAddress;
+    private boolean socketConnected = false;
+    private String ERROR_TYPE;
+    private final int connectionTimeout = 5000;
 
     public static Logger logger = Logger.getLogger(ConnectionService.class.getName());
 
@@ -38,18 +38,26 @@ public class ConnectionService
         this.ipAddress = ipAddress;
         this.isCLI = isCLI;
 
-        if (aSocket == null)
+        InetSocketAddress socketAddress = null;
+
+        try
         {
-            try
-            {
-                socket = new Socket(ipAddress, 25);
-            } catch (IOException e)
-            {
-                logger.info("unable to open the socket: " + e.getMessage());
-            }
+            socketAddress = new InetSocketAddress(ipAddress, 25);
+
+            if (aSocket == null)
+                socket = new Socket();
+            else
+                socket = aSocket;
+
+            socket.connect(socketAddress, connectionTimeout);
+            socketConnected = true;
+        } catch (IOException e)
+        {
+            logger.info("I/O Exception opening the socket: " + e.getMessage());
+            ERROR_TYPE = e.getMessage();
+            return;
         }
-        else
-            socket = aSocket;
+
     }
 
     public void initChannels()
@@ -59,7 +67,7 @@ public class ConnectionService
             objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
         } catch (IOException e)
         {
-            logger.info("Unalbe to create the object output stream: " + e.getMessage());
+            logger.info("Unable to create the object output stream: " + e.getMessage());
         }
 
         try
@@ -70,29 +78,7 @@ public class ConnectionService
             logger.info("Unable to create the object input stream: " + e.getMessage());
         }
 
-        /*try
-        {
-            socketIn = new Scanner(socket.getInputStream());
-        } catch (IOException e)
-        {
-            logger.info("Unable to create the scanner input stream: " + e.getMessage());
-        }*/
-
-        /*try
-        {
-            socketOut = new PrintWriter(socket.getOutputStream());
-        } catch (IOException e)
-        {
-            logger.info("Unable to create the print writer output stream: " + e.getMessage());
-        }*/
-
-        //socketOut.println(Constants.CLICONNECT);
-        //socketOut.flush();
-
-        if (isCLI)
-            sendCommand(Constants.CLICONNECT);
-        else
-            sendCommand(Constants.CLICONNECT);
+        sendCommand(isCLI ? Constants.CLICONNECT : Constants.CONNECT);
     }
 
     public void sendCommmandArguments(CommandArguments commandArguments)
@@ -276,6 +262,36 @@ public class ConnectionService
     public void setIpAddress(String ipAddress)
     {
         this.ipAddress = ipAddress;
+    }
+
+    public boolean isCLI()
+    {
+        return isCLI;
+    }
+
+    public void setCLI(boolean CLI)
+    {
+        isCLI = CLI;
+    }
+
+    public boolean isSocketConnected()
+    {
+        return socketConnected;
+    }
+
+    public void setSocketConnected(boolean socketConnected)
+    {
+        this.socketConnected = socketConnected;
+    }
+
+    public String getERROR_TYPE()
+    {
+        return ERROR_TYPE;
+    }
+
+    public void setERROR_TYPE(String ERROR_TYPE)
+    {
+        this.ERROR_TYPE = ERROR_TYPE;
     }
 
     /*public Scanner getSocketIn()
