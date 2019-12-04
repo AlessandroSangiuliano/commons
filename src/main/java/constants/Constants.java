@@ -15,6 +15,7 @@ public class Constants
    public static final String OS_INFO = "os info";
    public static final String UPDATE = "update";
    public static final String ECHO = "echo";
+   public static final String OK = "ok";
    public static final String IPNULL = "ipnull";
    public static final String INVALIDLEN = "invalidlen";
    public static final String NOTANUMBER = "notanumber";
