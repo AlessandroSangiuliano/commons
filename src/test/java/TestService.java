@@ -11,4 +11,12 @@ public class TestService
     {
         boolean b = ConnectionService.checkConnection();
     }
+
+    @Test
+    public void test_INIT_CHANNELS() throws InterruptedException
+    {
+        ConnectionService connectionService = new ConnectionService("192.168.1.4", true);
+        connectionService.initChannels();
+        Thread.sleep(10000);
+    }
 }
