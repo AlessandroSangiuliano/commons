@@ -217,6 +217,12 @@ public class ConnectionService
             case Constants.SEND_FILE:
                 writeCommand(command);
                 break;
+            case Constants.CLICONNECT:
+                writeCommand(command);
+                break;
+            case Constants.CONNECT:
+                writeCommand(command);
+                break;
             default:
                 logger.info("Wrong command");
         }
