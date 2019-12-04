@@ -222,6 +222,20 @@ public class ConnectionService
         }
     }
 
+    public void quit()
+    {
+        logger.info("Quitting...");
+        sendCommand(Constants.QUIT);
+
+        try
+        {
+            socket.close();
+        } catch (IOException e)
+        {
+            logger.info("Unable to close the socket: " + e.getMessage());
+        }
+    }
+
     /*** ACCESSORS ***/
 
     public Socket getSocket()
