@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c69daff-6d1f-4d92-bf8a-aeb049696ae0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/services/ConnectionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/services/ConnectionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/TestService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/TestService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +52,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
   <component name="RecentsManager">
@@ -99,7 +104,7 @@
     </option>
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>C:\Users\Alex\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -120,21 +125,41 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1575458157727" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1575472266721">
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1575533267634">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1575472266721" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1575472266721">
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1575533267634" />
+    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1575533267634">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1575472266721" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1575472266721">
+    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1575533267634" />
+    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1575533267634">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1575472266721" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1575472266721">
+    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1575533267634" />
+    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1575533267634">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1575472266721" />
+    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1575533267634" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1575533267635">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1575533267635" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1575533267635">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1575533267635" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1575533267634">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1575533267634" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1575533267635">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1575533267635" />
+    <state x="277" y="54" key="SettingsEditor" timestamp="1575532913982">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="54" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1575532913982" />
   </component>
 </project>
