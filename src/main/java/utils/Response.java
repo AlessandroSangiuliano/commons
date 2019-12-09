@@ -1,11 +1,13 @@
 package utils;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class Response implements Serializable
 {
     private String serverResponse;
     private String message;
+    private List<String> classRooms;
 
 
     @Override
@@ -36,5 +38,15 @@ public class Response implements Serializable
     public void setMessage(String message)
     {
         this.message = message;
+    }
+
+    public List<String> getClassRooms()
+    {
+        return classRooms;
+    }
+
+    public void setClassRooms(List<String> classRooms)
+    {
+        this.classRooms = classRooms;
     }
 }
