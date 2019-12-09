@@ -5,6 +5,7 @@ import utils.Response;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.util.List;
 import java.util.logging.Logger;
 
 public class ServerResponseHandler
@@ -80,5 +81,12 @@ public class ServerResponseHandler
         Response response = deserializeObject();
 
         return response.getMessage();
+    }
+
+    public List<String> handleClassRooms()
+    {
+        Response response = deserializeObject();
+
+        return response.getClassRooms();
     }
 }
