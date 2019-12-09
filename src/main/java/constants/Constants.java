@@ -21,4 +21,6 @@ public class Constants
    public static final String NOTANUMBER = "notanumber";
    public static final String VALIDADDR = "validaddr";
    public static final String EMPTYADDR = "emptyaddr";
+   public static final String GETCLASSROOMS = "getclassrooms";
+   public static final String GETSTUDENTS = "getstudents";
 }
