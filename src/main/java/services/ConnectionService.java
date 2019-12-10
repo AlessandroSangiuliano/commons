@@ -223,6 +223,9 @@ public class ConnectionService
             case Constants.CONNECT:
                 writeCommand(command);
                 break;
+            case Constants.GETCLASSROOMS:
+                writeCommand(command);
+                break;
             default:
                 logger.info("Wrong command");
         }
