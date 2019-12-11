@@ -8,6 +8,7 @@ public class Response implements Serializable
     private String serverResponse;
     private String message;
     private List<String> classRooms;
+    private List<StudentDetails> studentDetails;
 
 
     @Override
@@ -48,5 +49,15 @@ public class Response implements Serializable
     public void setClassRooms(List<String> classRooms)
     {
         this.classRooms = classRooms;
+    }
+
+    public List<StudentDetails> getStudentDetails()
+    {
+        return studentDetails;
+    }
+
+    public void setStudentDetails(List<StudentDetails> studentDetails)
+    {
+        this.studentDetails = studentDetails;
     }
 }

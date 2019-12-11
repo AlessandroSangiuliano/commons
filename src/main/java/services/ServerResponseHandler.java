@@ -2,6 +2,7 @@ package services;
 
 import constants.ServerResponse;
 import utils.Response;
+import utils.StudentDetails;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -88,5 +89,12 @@ public class ServerResponseHandler
         Response response = deserializeObject();
 
         return response.getClassRooms();
+    }
+
+    public List<StudentDetails> handleStudentNamesAndLastNames()
+    {
+        Response response = deserializeObject();
+
+        return response.getStudentDetails();
     }
 }
