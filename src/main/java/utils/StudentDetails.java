@@ -1,6 +1,8 @@
 package utils;
 
-public class StudentDetails
+import java.io.Serializable;
+
+public class StudentDetails implements Serializable
 {
     private String name;
     private String lastName;
