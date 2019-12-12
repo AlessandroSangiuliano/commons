@@ -241,6 +241,8 @@ public class ConnectionService
 
         try
         {
+            objectOutputStream.close();
+            objectInputStream.close();
             socket.close();
         } catch (IOException e)
         {
