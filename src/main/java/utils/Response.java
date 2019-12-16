@@ -9,6 +9,7 @@ public class Response implements Serializable
     private String message;
     private List<String> classRooms;
     private List<StudentDetails> studentDetails;
+    private Exception exception;
 
 
     @Override
@@ -59,5 +60,15 @@ public class Response implements Serializable
     public void setStudentDetails(List<StudentDetails> studentDetails)
     {
         this.studentDetails = studentDetails;
+    }
+
+    public Exception getException()
+    {
+        return exception;
+    }
+
+    public void setException(Exception exception)
+    {
+        this.exception = exception;
     }
 }

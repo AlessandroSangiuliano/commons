@@ -62,7 +62,7 @@
       <recent name="utils" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestService.test_INIT_CHANNELS">
+  <component name="RunManager" selected="JUnit.TestService.test_THREADEDRESPONSE">
     <configuration name="TestService.test_CHECK_CONNECTION" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="com.commons.test" />
       <option name="PACKAGE_NAME" value="" />
@@ -83,8 +83,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestService.test_THREADEDRESPONSE" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="com.commons.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestService" />
+      <option name="METHOD_NAME" value="test_THREADEDRESPONSE" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestService.test_THREADEDRESPONSE" />
         <item itemvalue="JUnit.TestService.test_INIT_CHANNELS" />
         <item itemvalue="JUnit.TestService.test_CHECK_CONNECTION" />
       </list>
@@ -120,10 +131,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="70" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1575470329242" />
-    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1576060250454">
+    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1576399963922">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1576060250454" />
+    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1576399963922" />
     <state x="499" y="188" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1576060089542">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -132,22 +143,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1576059800413" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1575984815009">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1576348380741">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1575984815009" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1575984815008">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1576348380741" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1576348380741">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1575984815008" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1575984815007">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1576348380741" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1576348380741">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1575984815007" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1575984815009">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1576348380741" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1576348380741">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1575984815009" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1576348380741" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1575533267635">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
