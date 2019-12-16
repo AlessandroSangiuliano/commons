@@ -31,11 +31,14 @@ public class ServerResponseHandler
         return ok;
     }
 
-    public boolean handleReceived()
+    public boolean handleReceived() throws Exception
     {
         boolean received = false;
 
         Response response = this.deserializeObject();
+
+        if (response.getException() != null)
+            throw response.getException();
 
         if (response.getServerResponse().equals(ServerResponse.RECEIVED))
             received = true;
@@ -54,19 +57,26 @@ public class ServerResponseHandler
         } catch (IOException e)
         {
             logger.info("Unable to read the response: " + e.getMessage());
+            response = new Response();
+            response.setException(e);
         } catch (ClassNotFoundException e)
         {
             logger.info("Class not found: " + e.getMessage());
+            response = new Response();
+            response.setException(e);
         }
 
         return response;
     }
 
-    public boolean handleExists()
+    public boolean handleExists() throws Exception
     {
         boolean exists = false;
 
         Response response = this.deserializeObject();
+
+        if (response.getException() != null)
+            throw response.getException();
 
         if (response.getServerResponse().equals(ServerResponse.EXISTS))
             exists = true;
@@ -77,24 +87,34 @@ public class ServerResponseHandler
         return exists;
     }
 
-    public String handleMessage()
+    public String handleMessage() throws Exception
     {
         Response response = deserializeObject();
+
+        if (response.getException() != null)
+            throw response.getException();
 
         return response.getMessage();
     }
 
-    public List<String> handleClassRooms()
+    public List<String> handleClassRooms() throws Exception
     {
         Response response = deserializeObject();
+
+        if (response.getException() != null)
+            throw response.getException();
 
         return response.getClassRooms();
     }
 
-    public List<StudentDetails> handleStudentNamesAndLastNames()
+    public List<StudentDetails> handleStudentNamesAndLastNames() throws Exception
     {
         Response response = deserializeObject();
 
+        if (response.getException() != null)
+            throw response.getException();
+
         return response.getStudentDetails();
     }
+
 }

@@ -3,6 +3,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 import services.ConnectionService;
+import services.ServerResponseHandler;
 
 @RunWith(JUnit4.class)
 public class TestService
@@ -25,5 +26,35 @@ public class TestService
         }
 
         connectionService.initChannels();
+    }
+
+    @Test
+    public void test_THREADEDRESPONSE() throws InterruptedException
+    {
+        ConnectionService connectionService = new ConnectionService("127.0.0.1", true);
+        connectionService.initChannels();
+        ServerResponseHandler responseHandler = new ServerResponseHandler(connectionService);
+        final boolean[] ok = {false};
+        String ciao;
+
+        new Thread(){
+            @Override
+            public void run()
+            {
+                ok[0] = responseHandler.handleOK();
+
+            }
+        }.start();
+
+
+        Thread.sleep(3000);
+        Assert.assertTrue(ok[0]);
+
+    }
+
+    @Test
+    public void test_RECEIVED_OK_EXCEPTION()
+    {
+
     }
 }

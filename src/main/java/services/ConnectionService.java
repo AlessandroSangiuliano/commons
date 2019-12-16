@@ -229,6 +229,9 @@ public class ConnectionService
             case Constants.GETSTUDENTS:
                 writeCommand(command);
                 break;
+            case Constants.SHUTDOWN:
+                writeCommand(command);
+                break;
             default:
                 logger.info("Wrong command");
         }
