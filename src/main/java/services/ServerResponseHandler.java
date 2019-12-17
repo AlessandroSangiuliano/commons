@@ -19,11 +19,14 @@ public class ServerResponseHandler
         connectionService = aConnectionService;
     }
 
-    public boolean handleOK()
+    public boolean handleOK() throws Exception
     {
         boolean ok = false;
 
         Response response = this.deserializeObject();
+
+        if (response.getException() != null)
+            throw response.getException();
 
         if (response.getServerResponse().equals(ServerResponse.OK))
             ok = true;
