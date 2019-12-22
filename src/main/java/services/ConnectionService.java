@@ -14,8 +14,6 @@ public class ConnectionService
     private ObjectInputStream objectInputStream;
     private ObjectOutputStream objectOutputStream;
     private boolean isCLI = false;
-    //private Scanner socketIn;
-    //private PrintWriter socketOut;
     private String ipAddress;
     private boolean socketConnected = false;
     private String ERROR_TYPE;
@@ -325,23 +323,4 @@ public class ConnectionService
         this.ERROR_TYPE = ERROR_TYPE;
     }
 
-    /*public Scanner getSocketIn()
-    {
-        return socketIn;
-    }*/
-
-   /* public void setSocketIn(Scanner socketIn)
-    {
-        this.socketIn = socketIn;
-    }*/
-
-    /*public PrintWriter getSocketOut()
-    {
-        return socketOut;
-    }*/
-
-    /*public void setSocketOut(PrintWriter socketOut)
-    {
-        this.socketOut = socketOut;
-    }*/
 }
