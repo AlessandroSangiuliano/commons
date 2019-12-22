@@ -2,12 +2,14 @@ package utils;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class StudentDetails implements Serializable
 {
     private String name;
     private String lastName;
     private List<Integer> grades;
+    private Double average;
 
     public StudentDetails()
     {
@@ -19,6 +21,15 @@ public class StudentDetails implements Serializable
         name = aName;
         lastName = aLastName;
     }
+
+    public Double calculateAverage()
+    {
+        Integer sum = grades.stream().collect(Collectors.summingInt(Integer::intValue));
+        average = Double.valueOf(sum) / Double.valueOf(grades.size());
+        return average;
+    }
+
+    /*** ACCESSORS ***/
 
     public String getName()
     {
@@ -48,5 +59,18 @@ public class StudentDetails implements Serializable
     public void setGrades(List<Integer> grades)
     {
         this.grades = grades;
+    }
+
+    public Double getAverage()
+    {
+        if (average == null || average == 0.0d || average == 0)
+            average = calculateAverage();
+
+        return average;
+    }
+
+    public void setAverage(Double average)
+    {
+        this.average = average;
     }
 }
