@@ -23,4 +23,5 @@ public class Constants
    public static final String EMPTYADDR = "emptyaddr";
    public static final String GETCLASSROOMS = "getclassrooms";
    public static final String GETSTUDENTS = "getstudents";
+   public static final String GRADES = "grades";
 }
