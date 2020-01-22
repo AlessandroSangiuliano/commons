@@ -24,4 +24,5 @@ public class Constants
    public static final String GETCLASSROOMS = "getclassrooms";
    public static final String GETSTUDENTS = "getstudents";
    public static final String GRADES = "grades";
+   public static final String RESET = "reset";
 }
