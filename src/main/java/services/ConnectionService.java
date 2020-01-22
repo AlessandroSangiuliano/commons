@@ -233,6 +233,9 @@ public class ConnectionService
             case Constants.GRADES:
                 writeCommand(command);
                 break;
+            case Constants.RESET:
+                writeCommand(command);
+                break;
             default:
                 logger.info("Wrong command");
         }
